@@ -403,6 +403,11 @@ Methods
 
     Draws the string at the given position.
 
+    .. note:: When Raqm layout is used, Pillow shapes and reorders text itself.
+              Do not first pass text through :pypi:`arabic-reshaper` and
+              :pypi:`python-bidi`. By default, :pypi:`arabic-reshaper` also
+              removes diacritics. See :py:attr:`PIL.ImageFont.Layout.RAQM`.
+
     :param xy: The anchor coordinates of the text.
     :param text: String to be drawn. If it contains any newline characters,
                  the text is passed on to
